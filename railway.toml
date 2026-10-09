@@ -1,0 +1,8 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "bash /app/notify-abandoned.sh"
+# Every 15 minutes. Notifies users of carts abandoned for > 2 hours.
+cronSchedule = "*/15 * * * *"
