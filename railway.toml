@@ -4,5 +4,6 @@ dockerfilePath = "Dockerfile"
 
 [deploy]
 startCommand = "bash /app/notify-abandoned.sh"
-# Every 15 minutes. Notifies users of carts abandoned for > 2 hours.
-cronSchedule = "*/15 * * * *"
+# Runs at 10:00 AM, 3:00 PM, and 8:00 PM IST (04:30, 09:30, 14:30 UTC)
+# Optimal psychological times for non-spammy engagement.
+cronSchedule = "30 4,9,14 * * *"
